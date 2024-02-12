@@ -1,24 +1,534 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zKn-sB-KJm">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="inn-Fx-YNa">
+            <objects>
+                <navigationController id="zKn-sB-KJm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nwM-oF-Vcq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8hi-N2-mh5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X8T-5I-1ZD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-248" y="-102"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="BYZ-38-t0r" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Homebg" translatesAutoresizingMaskIntoConstraints="NO" id="GC4-BZ-X6f">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Naruto Anime" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLc-oz-5qc">
+                                <rect key="frame" x="15" y="118" width="363" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.7803921568627451" green="0.63255677383208397" blue="0.1079679512700322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHh-Oe-Og9">
+                                <rect key="frame" x="100" y="254.00000000000003" width="193" height="34.333333333333343"/>
+                                <color key="backgroundColor" red="0.34901960780000002" green="0.7843137255" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LEVEL 1">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="XQI-JS-WUt" kind="show" id="I81-Nq-c66"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdI-5T-PbD">
+                                <rect key="frame" x="100" y="388.33333333333331" width="193" height="35"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.41568627450000001" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LEVEL 2">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="mbK-4G-Udy" kind="show" id="QfZ-oN-oIK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUd-Hi-OLz">
+                                <rect key="frame" x="343.33333333333331" y="783.66666666666663" width="49.666666666666686" height="34.333333333333371"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="info.circle" catalog="system">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="3mW-ms-phk" kind="show" id="LBg-Rl-fcV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fHh-Oe-Og9" secondAttribute="trailing" constant="100" id="0dn-71-yyP"/>
+                            <constraint firstItem="AUd-Hi-OLz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="53G-2d-gb8"/>
+                            <constraint firstItem="GC4-BZ-X6f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cqy-kM-bWD"/>
+                            <constraint firstItem="WdI-5T-PbD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="IYs-i1-I9B"/>
+                            <constraint firstItem="GC4-BZ-X6f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PQV-vS-JwI"/>
+                            <constraint firstItem="AUd-Hi-OLz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RcV-fQ-tNx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GC4-BZ-X6f" secondAttribute="trailing" id="TN7-6j-dJB"/>
+                            <constraint firstItem="fHh-Oe-Og9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Wci-Ff-u6M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CLc-oz-5qc" secondAttribute="trailing" constant="15" id="YSk-Lx-W0R"/>
+                            <constraint firstItem="WdI-5T-PbD" firstAttribute="top" secondItem="fHh-Oe-Og9" secondAttribute="bottom" constant="100" id="aMV-CV-r6H"/>
+                            <constraint firstItem="fHh-Oe-Og9" firstAttribute="top" secondItem="CLc-oz-5qc" secondAttribute="bottom" constant="100" id="dx8-to-KLQ"/>
+                            <constraint firstItem="CLc-oz-5qc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="gkY-zo-VFr"/>
+                            <constraint firstItem="CLc-oz-5qc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="lh6-qM-c9V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GC4-BZ-X6f" secondAttribute="bottom" id="pll-mJ-ctS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WdI-5T-PbD" secondAttribute="trailing" constant="100" id="qZn-0E-O0A"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="YBc-Uc-2lp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="700" y="-102.11267605633803"/>
+        </scene>
+        <!--Uchiha Home-->
+        <scene sceneID="ZxC-aK-9kM">
+            <objects>
+                <viewController title="Uchiha Home" id="XQI-JS-WUt" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="15n-Is-wfN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uchihabg" translatesAutoresizingMaskIntoConstraints="NO" id="FyA-Eq-toY">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpS-2A-LzW">
+                                <rect key="frame" x="100" y="503" width="193" height="35"/>
+                                <color key="backgroundColor" red="0.47450980390000003" green="0.08235294118" blue="0.074509803920000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="xP9-wy-Ppx"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Uchiha Madara">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="GK4-g3-8Qf" kind="show" id="Kf7-3y-kzH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfc-9n-iUa">
+                                <rect key="frame" x="100" y="568" width="193" height="35"/>
+                                <color key="backgroundColor" red="0.47450980390000003" green="0.090196078430000007" blue="0.086274509799999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="wyJ-GH-xup"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Uchiha Itachi">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Qf2-fd-ZbB" kind="show" id="tKv-bM-ltt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b6z-Pu-otM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yfc-9n-iUa" firstAttribute="leading" secondItem="b6z-Pu-otM" secondAttribute="leading" constant="100" id="H05-kB-6te"/>
+                            <constraint firstItem="FyA-Eq-toY" firstAttribute="leading" secondItem="b6z-Pu-otM" secondAttribute="leading" id="Nnb-gC-Xef"/>
+                            <constraint firstItem="b6z-Pu-otM" firstAttribute="trailing" secondItem="FyA-Eq-toY" secondAttribute="trailing" id="VQb-yJ-uGU"/>
+                            <constraint firstItem="b6z-Pu-otM" firstAttribute="trailing" secondItem="BpS-2A-LzW" secondAttribute="trailing" constant="100" id="WjE-OQ-Tex"/>
+                            <constraint firstItem="BpS-2A-LzW" firstAttribute="top" secondItem="b6z-Pu-otM" secondAttribute="top" constant="400" id="brL-6I-d2t"/>
+                            <constraint firstItem="Yfc-9n-iUa" firstAttribute="top" secondItem="BpS-2A-LzW" secondAttribute="bottom" constant="30" id="cc4-Ze-dPh"/>
+                            <constraint firstItem="b6z-Pu-otM" firstAttribute="trailing" secondItem="Yfc-9n-iUa" secondAttribute="trailing" constant="100" id="dFL-RZ-xRE"/>
+                            <constraint firstItem="FyA-Eq-toY" firstAttribute="top" secondItem="b6z-Pu-otM" secondAttribute="top" id="gKe-97-sW3"/>
+                            <constraint firstItem="b6z-Pu-otM" firstAttribute="bottom" secondItem="FyA-Eq-toY" secondAttribute="bottom" id="lOF-Cs-jZ1"/>
+                            <constraint firstItem="BpS-2A-LzW" firstAttribute="leading" secondItem="b6z-Pu-otM" secondAttribute="leading" constant="100" id="sHK-d7-aqy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Py-i0-jIr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ml-KX-94F" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652.6717557251907" y="-682.3943661971831"/>
+        </scene>
+        <!--Uzumaki Home-->
+        <scene sceneID="Q18-S5-7n4">
+            <objects>
+                <viewController title="Uzumaki Home" id="mbK-4G-Udy" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P6f-Wy-EuL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uzumakibg" translatesAutoresizingMaskIntoConstraints="NO" id="rYO-9F-91K">
+                                <rect key="frame" x="0.0" y="103" width="393" height="684.33333333333337"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNo-iz-LVc">
+                                <rect key="frame" x="100" y="603" width="193" height="34.333333333333371"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Jxo-2c-73J"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Uzumaki Naruto">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="m0t-7x-TKd" kind="show" id="1ru-I7-5b0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B8O-UL-w8W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TNo-iz-LVc" firstAttribute="leading" secondItem="B8O-UL-w8W" secondAttribute="leading" constant="100" id="4fT-SW-Vm0"/>
+                            <constraint firstItem="B8O-UL-w8W" firstAttribute="trailing" secondItem="rYO-9F-91K" secondAttribute="trailing" id="AK7-y5-ci7"/>
+                            <constraint firstItem="rYO-9F-91K" firstAttribute="leading" secondItem="B8O-UL-w8W" secondAttribute="leading" id="Dqj-5a-olE"/>
+                            <constraint firstItem="B8O-UL-w8W" firstAttribute="bottom" secondItem="rYO-9F-91K" secondAttribute="bottom" id="Lyf-ct-4op"/>
+                            <constraint firstItem="B8O-UL-w8W" firstAttribute="bottom" secondItem="TNo-iz-LVc" secondAttribute="bottom" constant="150" id="MIW-Lm-vAU"/>
+                            <constraint firstItem="TNo-iz-LVc" firstAttribute="top" secondItem="B8O-UL-w8W" secondAttribute="top" constant="500" id="SmU-lL-SSb"/>
+                            <constraint firstItem="rYO-9F-91K" firstAttribute="top" secondItem="B8O-UL-w8W" secondAttribute="top" id="fpj-5S-42A"/>
+                            <constraint firstItem="B8O-UL-w8W" firstAttribute="trailing" secondItem="TNo-iz-LVc" secondAttribute="trailing" constant="100" id="os1-km-PBY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IX9-eQ-a7c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tcZ-xl-FJ3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652.6717557251907" y="431.69014084507046"/>
+        </scene>
+        <!--Uzumaki screen 1-->
+        <scene sceneID="d7S-Ip-lAm">
+            <objects>
+                <viewController title="Uzumaki screen 1" id="m0t-7x-TKd" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H2M-8k-Wlw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Narutobg1" translatesAutoresizingMaskIntoConstraints="NO" id="xgv-Rs-x2t">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uzumaki Naruto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agr-Dk-b1F">
+                                <rect key="frame" x="15" y="118" width="363" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2lS-NR-vIj">
+                                <rect key="frame" x="15" y="157" width="363" height="646"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Naruto was born on the night of October 10th to Minato Namikaze (the Fourth Hokage) and Kushina Uzumaki (the second jinchūriki of the Nine-Tails). He was named after Naruto Musasabi, the protagonist of Jiraiya's first book, which made the Sannin his godfather. The Third Hokage made special arrangements for Minato to preserve Kushina's seal containing the Nine-Tails while she gave birth to Naruto in a remote location, assisted by midwives and Anbu. A masked man, Tobi, tracked down their location, however, killed the midwives and Anbu, and captured Naruto, forcing Minato to quickly rescue him and teleport him to a safe house.
+With Minato gone, Tobi captured Kushina and released the Nine-Tails from her, using it to devastate Konoha. Minato saved Kushina and left Naruto in her care before he went to protect the village, eventually defeating Tobi and freeing the Nine-Tails from Tobi's control. Returning to Naruto and Kushina's location, Minato realised the only way to stop the Nine-Tails was to seal it within Naruto, believing that his son would someday need the fox's power to defeat Tobi when he returned. Since the Nine-Tails' chakra was too immense to be sealed into an infant, Minato sacrificed his soul to split the fox's chakra in half, sealing the Yin half within himself and the Yang half within Naruto. After telling Naruto how much they loved him, Minato and Kushina succumbed to their wounds from protecting their son from the Nine-Tails and passed away.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO2-nL-7tc">
+                                <rect key="frame" x="100" y="768" width="193" height="35"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Read more.."/>
+                                <connections>
+                                    <segue destination="jt2-Mg-EuD" kind="show" id="cym-gI-EJU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Diu-AU-RRv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="agr-Dk-b1F" firstAttribute="leading" secondItem="Diu-AU-RRv" secondAttribute="leading" constant="15" id="4Tp-LV-dvA"/>
+                            <constraint firstItem="Diu-AU-RRv" firstAttribute="trailing" secondItem="agr-Dk-b1F" secondAttribute="trailing" constant="15" id="7Fi-ol-mXg"/>
+                            <constraint firstItem="Diu-AU-RRv" firstAttribute="bottom" secondItem="xgv-Rs-x2t" secondAttribute="bottom" id="7rS-70-yA3"/>
+                            <constraint firstItem="xgv-Rs-x2t" firstAttribute="leading" secondItem="Diu-AU-RRv" secondAttribute="leading" id="98a-m1-EyI"/>
+                            <constraint firstItem="aO2-nL-7tc" firstAttribute="leading" secondItem="Diu-AU-RRv" secondAttribute="leading" constant="100" id="9wG-8q-XAZ"/>
+                            <constraint firstItem="Diu-AU-RRv" firstAttribute="trailing" secondItem="2lS-NR-vIj" secondAttribute="trailing" constant="15" id="AS8-lD-QXI"/>
+                            <constraint firstItem="2lS-NR-vIj" firstAttribute="leading" secondItem="Diu-AU-RRv" secondAttribute="leading" constant="15" id="FCk-Yz-mFu"/>
+                            <constraint firstItem="xgv-Rs-x2t" firstAttribute="top" secondItem="Diu-AU-RRv" secondAttribute="top" id="JSO-Fy-IOS"/>
+                            <constraint firstItem="2lS-NR-vIj" firstAttribute="top" secondItem="agr-Dk-b1F" secondAttribute="bottom" constant="15" id="KYU-ec-JfO"/>
+                            <constraint firstItem="Diu-AU-RRv" firstAttribute="trailing" secondItem="xgv-Rs-x2t" secondAttribute="trailing" id="ehW-ly-lgK"/>
+                            <constraint firstItem="agr-Dk-b1F" firstAttribute="top" secondItem="Diu-AU-RRv" secondAttribute="top" constant="15" id="g9K-P7-Ltm"/>
+                            <constraint firstItem="Diu-AU-RRv" firstAttribute="bottom" secondItem="aO2-nL-7tc" secondAttribute="bottom" constant="15" id="gxj-gU-bH1"/>
+                            <constraint firstItem="Diu-AU-RRv" firstAttribute="bottom" secondItem="2lS-NR-vIj" secondAttribute="bottom" constant="15" id="luP-CQ-q4V"/>
+                            <constraint firstItem="Diu-AU-RRv" firstAttribute="trailing" secondItem="aO2-nL-7tc" secondAttribute="trailing" constant="100" id="oo3-nS-thA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="h9a-kK-md4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNa-bE-XMj" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2852.6717557251909" y="1172.5352112676057"/>
+        </scene>
+        <!--Uzumaki screen 2-->
+        <scene sceneID="ce1-ua-IFi">
+            <objects>
+                <viewController title="Uzumaki screen 2" id="jt2-Mg-EuD" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKB-Qg-B81">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Narutobg2" translatesAutoresizingMaskIntoConstraints="NO" id="4YQ-T3-cqf">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IwB-ph-QGZ">
+                                <rect key="frame" x="15" y="118" width="363" height="685"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Orphaned, and not having anyone else to provide for him, Naruto received monthly income from the village in order to afford daily necessities. Naruto grew up not knowing who his parents were, receiving only his mother's surname, as Hiruzen wanted to protect Naruto from his father's enemies.[18] Minato's dying wish that Naruto be regarded as a hero was honoured by the very few who could put aside their pain and losses caused by the disaster, while the majority of Konoha, however having no knowledge of the circumstances surrounding his birth, openly ostracised and resented Naruto for containing the beast that devastated the village and took many lives; some even viewed Naruto as the Nine-Tails itself. Soon, the Third Hokage forbade anyone from mentioning the Nine-Tails, hoping that the younger generation would not blindly hate Naruto as their parents did.[19] However, Naruto's peers emulated their parents' hatred of him, despite not knowing why. This social isolation caused Naruto to crave acknowledgement, which he would gain by pulling pranks.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bkk-NP-Zv7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IwB-ph-QGZ" firstAttribute="leading" secondItem="Bkk-NP-Zv7" secondAttribute="leading" constant="15" id="0ie-Mv-5mP"/>
+                            <constraint firstItem="Bkk-NP-Zv7" firstAttribute="bottom" secondItem="4YQ-T3-cqf" secondAttribute="bottom" id="23n-7f-J1Y"/>
+                            <constraint firstItem="Bkk-NP-Zv7" firstAttribute="trailing" secondItem="4YQ-T3-cqf" secondAttribute="trailing" id="e20-cP-PPF"/>
+                            <constraint firstItem="4YQ-T3-cqf" firstAttribute="leading" secondItem="Bkk-NP-Zv7" secondAttribute="leading" id="m0Z-lR-Gqg"/>
+                            <constraint firstItem="IwB-ph-QGZ" firstAttribute="top" secondItem="Bkk-NP-Zv7" secondAttribute="top" constant="15" id="t4k-GN-UT1"/>
+                            <constraint firstItem="Bkk-NP-Zv7" firstAttribute="bottom" secondItem="IwB-ph-QGZ" secondAttribute="bottom" constant="15" id="tWg-si-Xf0"/>
+                            <constraint firstItem="4YQ-T3-cqf" firstAttribute="top" secondItem="Bkk-NP-Zv7" secondAttribute="top" id="u0C-YE-ryo"/>
+                            <constraint firstItem="Bkk-NP-Zv7" firstAttribute="trailing" secondItem="IwB-ph-QGZ" secondAttribute="trailing" constant="15" id="zNF-Ov-6j3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="SLb-xG-Ste"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ooo-2j-WfA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3753" y="1173"/>
+        </scene>
+        <!--Madara Screen 1-->
+        <scene sceneID="omC-66-gWh">
+            <objects>
+                <viewController title="Madara Screen 1" id="GK4-g3-8Qf" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mkl-7p-Aqp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Madarabg1" translatesAutoresizingMaskIntoConstraints="NO" id="TKr-eP-6dp">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uchiha Madara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAN-cf-XsF">
+                                <rect key="frame" x="15" y="118" width="363" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="qco-9Q-dcs">
+                                <rect key="frame" x="15" y="157" width="363" height="646"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Madara was born during the Warring States Period, and was the eldest of Tajima Uchiha's five children. Madara and his siblings grew up on the battlefield waging constant war with the Uchiha's rivals: the Senju. Three of his siblings died young, leaving Madara with only his younger brother, Izuna. Madara and Izuna became very close through their shared loss and constantly competed with each other to get stronger. This, combined with his naturally strong chakra, enabled the young Madara to defeat adult Senju in battle and develop a reputation as a genius.
+During his infrequent downtime, Madara met a boy his own age named Hashirama. The two quickly developed a friendly rivalry, be it skipping stones or urinating in rivers. Like Madara, Hashirama was also a shinobi who had lost his brothers on the battlefield. Together they imagined a world where children like themselves wouldn't need to fight. As a precaution, Madara and Hashirama did not divulge their family names, but nevertheless discovered each other's identities: Madara was an Uchiha, Hashirama was a Senju; it was their duty to kill each other, even if they were friends. Needing to choose between his family and his dreams of peace, Madara chose to end his friendship with Hashirama so he would have no reservations over killing him in the future, a resolve strong enough to awaken his Sharingan.
+Over the following years Madara and Hashirama continued to meet in combat. Madara could never defeat Hashirama — even after acquiring a Mangekyō Sharingan — and Hashirama could never bring himself to kill someone he still considered a friend, resulting in a constant stalemate between the two that lasted decades. In time, both Madara and Hashirama became leaders of their respective clans, a position.
+</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8j-qO-jqa">
+                                <rect key="frame" x="100" y="768" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Read more.."/>
+                                <connections>
+                                    <segue destination="Vpi-m1-NHw" kind="show" id="rFs-PZ-slY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HKk-vP-K2B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HKk-vP-K2B" firstAttribute="trailing" secondItem="EAN-cf-XsF" secondAttribute="trailing" constant="15" id="49R-lR-aMf"/>
+                            <constraint firstItem="qco-9Q-dcs" firstAttribute="top" secondItem="EAN-cf-XsF" secondAttribute="bottom" constant="15" id="5h1-Dh-aVn"/>
+                            <constraint firstItem="HKk-vP-K2B" firstAttribute="bottom" secondItem="qco-9Q-dcs" secondAttribute="bottom" constant="15" id="B04-ej-nbE"/>
+                            <constraint firstItem="EAN-cf-XsF" firstAttribute="leading" secondItem="HKk-vP-K2B" secondAttribute="leading" constant="15" id="Bgm-uR-2f7"/>
+                            <constraint firstItem="EAN-cf-XsF" firstAttribute="top" secondItem="HKk-vP-K2B" secondAttribute="top" constant="15" id="CHk-8I-JOt"/>
+                            <constraint firstItem="HKk-vP-K2B" firstAttribute="trailing" secondItem="d8j-qO-jqa" secondAttribute="trailing" constant="100" id="DJT-pS-HGY"/>
+                            <constraint firstItem="HKk-vP-K2B" firstAttribute="trailing" secondItem="TKr-eP-6dp" secondAttribute="trailing" id="ItK-TE-NjV"/>
+                            <constraint firstItem="qco-9Q-dcs" firstAttribute="leading" secondItem="HKk-vP-K2B" secondAttribute="leading" constant="15" id="QMC-BZ-Hns"/>
+                            <constraint firstItem="TKr-eP-6dp" firstAttribute="leading" secondItem="HKk-vP-K2B" secondAttribute="leading" id="a9A-gc-H7N"/>
+                            <constraint firstItem="HKk-vP-K2B" firstAttribute="bottom" secondItem="TKr-eP-6dp" secondAttribute="bottom" id="cGb-eQ-aBT"/>
+                            <constraint firstItem="TKr-eP-6dp" firstAttribute="top" secondItem="HKk-vP-K2B" secondAttribute="top" id="d5c-wF-vbt"/>
+                            <constraint firstItem="HKk-vP-K2B" firstAttribute="bottom" secondItem="d8j-qO-jqa" secondAttribute="bottom" constant="15" id="fC9-0q-rPY"/>
+                            <constraint firstItem="HKk-vP-K2B" firstAttribute="trailing" secondItem="qco-9Q-dcs" secondAttribute="trailing" constant="15" id="gaD-jh-XOs"/>
+                            <constraint firstItem="d8j-qO-jqa" firstAttribute="leading" secondItem="HKk-vP-K2B" secondAttribute="leading" constant="100" id="uhN-yU-He9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="n80-5N-oEy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IFR-Hq-IoK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2853" y="-1023"/>
+        </scene>
+        <!--Madara Screen 2-->
+        <scene sceneID="4jK-5t-S5y">
+            <objects>
+                <viewController title="Madara Screen 2" id="Vpi-m1-NHw" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G5T-ut-Q3w">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Madarabg2" translatesAutoresizingMaskIntoConstraints="NO" id="ImH-ON-Fkd">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="l4f-Ht-xou">
+                                <rect key="frame" x="15" y="118" width="363" height="685"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Even by Uchiha standards, Madara was born with very powerful chakra,[described as very foul and evil.This is partly because he inherited Indra's chakra. His large chakra reserves allowed him to fight nonstop for 24 hours before collapsing, and in his old age, summon the Demonic Statue of the Outer Path from its cage in the moon.His chakra control could perform complicated techniques with a single hand seal. He could also quickly absorb and synchronise senjutsu chakra with his own and enter Sage Mode, despite having no prior training in senjutsu. Even when distributing his chakra among 25 wood clones, each still had enough power to threaten the Five Kage.
+Madara was incredibly skilled in taijutsu. Against the Fourth Division, he calmly defeated thousands of opponents with physical combat, showing exception agility, reflexes, and coordination to disarm, dodge, and counter attacks from many directions at once. He could strike with precision before his opponent could react, and overpower individuals twice his size.He was fast enough to attack Naruto who was in Sage Mode.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tgb-bN-Tq9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tgb-bN-Tq9" firstAttribute="bottom" secondItem="l4f-Ht-xou" secondAttribute="bottom" constant="15" id="9Gz-Or-zIc"/>
+                            <constraint firstItem="ImH-ON-Fkd" firstAttribute="top" secondItem="Tgb-bN-Tq9" secondAttribute="top" id="HG1-kU-aAO"/>
+                            <constraint firstItem="ImH-ON-Fkd" firstAttribute="leading" secondItem="Tgb-bN-Tq9" secondAttribute="leading" id="Sfh-Es-rBF"/>
+                            <constraint firstItem="Tgb-bN-Tq9" firstAttribute="trailing" secondItem="ImH-ON-Fkd" secondAttribute="trailing" id="VFc-2q-ZMC"/>
+                            <constraint firstItem="Tgb-bN-Tq9" firstAttribute="trailing" secondItem="l4f-Ht-xou" secondAttribute="trailing" constant="15" id="hl9-h1-eAv"/>
+                            <constraint firstItem="Tgb-bN-Tq9" firstAttribute="bottom" secondItem="ImH-ON-Fkd" secondAttribute="bottom" id="jcx-ED-zIy"/>
+                            <constraint firstItem="l4f-Ht-xou" firstAttribute="top" secondItem="Tgb-bN-Tq9" secondAttribute="top" constant="15" id="wSt-YF-Xoq"/>
+                            <constraint firstItem="l4f-Ht-xou" firstAttribute="leading" secondItem="Tgb-bN-Tq9" secondAttribute="leading" constant="15" id="wWn-Sl-ptM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yMQ-Ns-V57"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bWg-rb-wHA" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3752" y="-1023"/>
+        </scene>
+        <!--Itachi Screen 1-->
+        <scene sceneID="0W5-G9-Hk2">
+            <objects>
+                <viewController title="Itachi Screen 1" id="Qf2-fd-ZbB" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fPp-jn-fxI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Itachibg1" translatesAutoresizingMaskIntoConstraints="NO" id="AyS-yQ-i0v">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uchiha Itachi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bg2-at-Bph">
+                                <rect key="frame" x="15" y="118" width="363" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eHJ-rQ-W9O">
+                                <rect key="frame" x="15" y="157" width="363" height="646"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Itachi Uchiha (うちはイタチ, Uchiha Itachi) was a shinobi of Konohagakure's Uchiha clan who served as an Anbu Captain. He later became an international criminal after murdering his entire clan, sparing only his younger brother, Sasuke. He afterwards joined the international criminal organisation known as Akatsuki, whose activity brought him into frequent conflict with Konoha and its ninja — including Sasuke who sought to avenge their clan by killing Itachi. Following his death, Itachi's motives were revealed to be more complicated than they seemed and that his actions were only ever in the interest of his brother and village, making him remain a loyal shinobi of Konohagakure to the very end.</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9bZ-YS-dDr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eHJ-rQ-W9O" firstAttribute="leading" secondItem="9bZ-YS-dDr" secondAttribute="leading" constant="15" id="BPa-nw-cnO"/>
+                            <constraint firstItem="9bZ-YS-dDr" firstAttribute="bottom" secondItem="AyS-yQ-i0v" secondAttribute="bottom" id="FWW-wj-B4X"/>
+                            <constraint firstItem="9bZ-YS-dDr" firstAttribute="trailing" secondItem="Bg2-at-Bph" secondAttribute="trailing" constant="15" id="SUu-T4-F88"/>
+                            <constraint firstItem="Bg2-at-Bph" firstAttribute="top" secondItem="9bZ-YS-dDr" secondAttribute="top" constant="15" id="SfX-Cc-5kq"/>
+                            <constraint firstItem="Bg2-at-Bph" firstAttribute="leading" secondItem="9bZ-YS-dDr" secondAttribute="leading" constant="15" id="YS1-8W-K3w"/>
+                            <constraint firstItem="9bZ-YS-dDr" firstAttribute="trailing" secondItem="eHJ-rQ-W9O" secondAttribute="trailing" constant="15" id="ayq-fk-oDX"/>
+                            <constraint firstItem="eHJ-rQ-W9O" firstAttribute="top" secondItem="Bg2-at-Bph" secondAttribute="bottom" constant="15" id="fcm-Vu-5FY"/>
+                            <constraint firstItem="9bZ-YS-dDr" firstAttribute="bottom" secondItem="eHJ-rQ-W9O" secondAttribute="bottom" constant="15" id="hEP-RI-dKo"/>
+                            <constraint firstItem="9bZ-YS-dDr" firstAttribute="trailing" secondItem="AyS-yQ-i0v" secondAttribute="trailing" id="j3L-S2-W0o"/>
+                            <constraint firstItem="AyS-yQ-i0v" firstAttribute="top" secondItem="9bZ-YS-dDr" secondAttribute="top" id="oCC-Hy-S5A"/>
+                            <constraint firstItem="AyS-yQ-i0v" firstAttribute="leading" secondItem="9bZ-YS-dDr" secondAttribute="leading" id="xf4-ae-q4n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zmv-Gg-ZPr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMt-oX-iV8" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2853" y="-102"/>
+        </scene>
+        <!--Info Screen-->
+        <scene sceneID="tPR-xX-4lT">
+            <objects>
+                <viewController title="Info Screen" id="3mW-ms-phk" customClass="ViewController" customModule="Exercise5" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hr0-k5-tcj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Infobg" translatesAutoresizingMaskIntoConstraints="NO" id="7VW-EN-zuQ">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Naruto Fans!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z30-3b-Ifl">
+                                <rect key="frame" x="15" y="118" width="363" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="RVx-GA-UT8">
+                                <rect key="frame" x="15" y="157" width="363" height="646"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Certainly! Naruto, a beloved Japanese manga and anime series, weaves a captivating tale of adventure, friendship, and determination. Created by Masashi Kishimoto, the story revolves around Naruto Uzumaki, an aspiring ninja who craves recognition from his peers and dreams of becoming the Hokage, the esteemed leader of his village. The saga begins with the manga, serialized in Shueisha’s Weekly Shōnen Jump from September 1999 to November 2014. The manga is divided into two parts: Naruto’s pre-teen years (volumes 1–27) and his teenage adventures (volumes 28–72). The first anime series, simply titled “Naruto”, aired from October 2002 to February 2007, spanning 220 episodes and following Naruto’s early journey as he trains, forms bonds, and faces formidable foes. The English dub aired on Cartoon Network and YTV. The second series, “Naruto: Shippuden”, picks up where the manga’s second part left off, running for 500 episodes from February 2007 to March 2017. The English dub aired on Disney XD and later on Adult Swim’s Toonami. In addition to the TV series, there are 11 animated films and 12 original video animations (OVAs) that delve deeper into the Naruto universe. Naruto’s influence extends beyond Japan, captivating audiences in the United States, Canada, the United Kingdom, and Australia. Fans can stream the series on platforms like Crunchyroll, Funimation, Hulu, and Netflix. Naruto isn’t just about ninja battles; it’s a testament to resilience, camaraderie, and the pursuit of one’s dreams. Whether you’re a seasoned fan or a newcomer, this epic saga continues to inspire generations. For more Naruto goodness, check out VIZ’s official website.</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1rN-v1-elj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RVx-GA-UT8" firstAttribute="top" secondItem="z30-3b-Ifl" secondAttribute="bottom" constant="15" id="1CE-Bf-Vhf"/>
+                            <constraint firstItem="z30-3b-Ifl" firstAttribute="top" secondItem="1rN-v1-elj" secondAttribute="top" constant="15" id="3Rt-zG-qTx"/>
+                            <constraint firstItem="7VW-EN-zuQ" firstAttribute="top" secondItem="1rN-v1-elj" secondAttribute="top" id="DkP-uu-PHw"/>
+                            <constraint firstItem="z30-3b-Ifl" firstAttribute="leading" secondItem="1rN-v1-elj" secondAttribute="leading" constant="15" id="M6O-Ng-nym"/>
+                            <constraint firstItem="1rN-v1-elj" firstAttribute="bottom" secondItem="RVx-GA-UT8" secondAttribute="bottom" constant="15" id="Nd0-W8-dm9"/>
+                            <constraint firstItem="1rN-v1-elj" firstAttribute="trailing" secondItem="7VW-EN-zuQ" secondAttribute="trailing" id="TYb-hZ-ekx"/>
+                            <constraint firstItem="RVx-GA-UT8" firstAttribute="leading" secondItem="1rN-v1-elj" secondAttribute="leading" constant="15" id="bNe-ox-h4J"/>
+                            <constraint firstItem="1rN-v1-elj" firstAttribute="bottom" secondItem="7VW-EN-zuQ" secondAttribute="bottom" id="f6k-PH-pXj"/>
+                            <constraint firstItem="1rN-v1-elj" firstAttribute="trailing" secondItem="RVx-GA-UT8" secondAttribute="trailing" constant="15" id="o4d-Dn-Vhl"/>
+                            <constraint firstItem="1rN-v1-elj" firstAttribute="trailing" secondItem="z30-3b-Ifl" secondAttribute="trailing" constant="15" id="wTi-ej-bwa"/>
+                            <constraint firstItem="7VW-EN-zuQ" firstAttribute="leading" secondItem="1rN-v1-elj" secondAttribute="leading" id="y2g-cA-L71"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="K3e-hf-mxB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Elf-12-fKW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="700" y="985"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Homebg" width="266.66665649414062" height="475"/>
+        <image name="Infobg" width="240" height="427.33334350585938"/>
+        <image name="Itachibg1" width="116.66666412353516" height="208.33332824707031"/>
+        <image name="Madarabg1" width="378.33334350585938" height="666.66668701171875"/>
+        <image name="Madarabg2" width="96" height="170.66667175292969"/>
+        <image name="Narutobg1" width="266.66665649414062" height="563"/>
+        <image name="Narutobg2" width="266.66665649414062" height="512.66668701171875"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <image name="uchihabg" width="283.33334350585938" height="503.66665649414062"/>
+        <image name="uzumakibg" width="240" height="426.66665649414062"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
